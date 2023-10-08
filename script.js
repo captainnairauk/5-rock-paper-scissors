@@ -60,7 +60,7 @@ function game() {
     let input = prompt("Please enter either Rock/Paper/Scissors");
     let correctInput = sanitisedString(input);
 
-    if ((correctInput.includes("Rock")) || (correctInput.includes("Paper")) || (correctInput.includes("Scissors"))) {
+    if ((correctInput === "Rock") || (correctInput === "Paper") || (correctInput === "Scissors")) {
       let playerSelection = correctInput;
 
       let computerSelection = getComputerChoice();
