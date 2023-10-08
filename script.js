@@ -4,7 +4,7 @@ function getComputerChoice() {
   return thing;
 }
 
-function capitalize(string) {
+function sanitisedString(string) {
   if(string === null){
     string = "";
   }
@@ -58,7 +58,7 @@ function game() {
   while (i < 5) {
     alert(`Round ${i + 1}`);
     let input = prompt("Please enter either Rock/Paper/Scissors");
-    let correctInput = capitalize(input);
+    let correctInput = sanitisedString(input);
 
     if ((correctInput.includes("Rock")) || (correctInput.includes("Paper")) || (correctInput.includes("Scissors"))) {
       let playerSelection = correctInput;
