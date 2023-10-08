@@ -6,7 +6,8 @@ function getComputerChoice() {
 
 function capitalize(string) {
   let lowerCase = string.toLowerCase();
-  let sanitisedString = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1);
+  let trimmedString = lowerCase.trim();
+  let sanitisedString = trimmedString.charAt(0).toUpperCase() + trimmedString.slice(1);
   return sanitisedString;
 }
 
