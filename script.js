@@ -5,9 +5,9 @@ function getComputerChoice() {
 }
 
 function sanitisedString(string) {
-  if(string === null){
-    string = "";
-  }
+  // if(string === null){
+  //   string = "";
+  // }
   let lowerCase = string.toLowerCase();
   let trimmedString = lowerCase.trim();
   let sanitisedString = trimmedString.charAt(0).toUpperCase() + trimmedString.slice(1);
