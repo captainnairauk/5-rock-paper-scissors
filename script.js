@@ -101,4 +101,31 @@ function game() {
   }
 }
 
-console.log(game());
+const btn = document.querySelectorAll(".btn");
+const resultContainer = document.querySelector(".result-container");
+const displayResult = document.createElement("p");
+const roundResult = document.querySelector("#round");
+const displayRound = document.createElement("span");
+let counter = 0;
+
+function updateRound(){
+  counter++;
+  displayRound.textContent = counter.toString();
+  return roundResult.appendChild(displayRound);
+}
+
+
+btn.forEach( (button) => {
+  button.addEventListener("click", function(e){
+    const playerChoice = e.target.textContent
+    const computerChoice = getComputerChoice();
+    const result = singleRoundOfGame(playerChoice, computerChoice);
+    displayResult.textContent = result;
+    resultContainer.appendChild(displayResult);
+    updateRound();
+  });
+});
+
+
+
+// console.log(game());

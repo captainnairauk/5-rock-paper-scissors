@@ -1,0 +1,22 @@
+*{
+  border: 1px red solid;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container{
+
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+button{
+  cursor: pointer;
+}
